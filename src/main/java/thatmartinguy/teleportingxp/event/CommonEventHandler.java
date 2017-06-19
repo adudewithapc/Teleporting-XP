@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.WorldTickEvent;
 
 public class CommonEventHandler
-{	
+{
 	@SubscribeEvent
 	public void worldTicked(WorldTickEvent event)
 	{
@@ -28,9 +28,19 @@ public class CommonEventHandler
 					if(event.world.loadedEntityList.get(i) instanceof EntityXPOrb)
 					{
 						EntityXPOrb xpOrb = (EntityXPOrb) event.world.loadedEntityList.get(i);
-						EntityPlayer closestPlayer = event.world.getClosestPlayerToEntity(xpOrb, Double.MAX_VALUE);
+						EntityPlayer closestPlayer = event.world.getNearestPlayerNotCreative(xpOrb, Double.MAX_VALUE);
 						if(closestPlayer != null)
+						{
 							xpOrb.setPosition(closestPlayer.posX, closestPlayer.posY, closestPlayer.posZ);
+						}
+						else
+						{
+							closestPlayer = event.world.getClosestPlayerToEntity(xpOrb, Double.MAX_VALUE);
+							if(closestPlayer != null)
+							{
+								xpOrb.setPosition(closestPlayer.posX, closestPlayer.posY, closestPlayer.posZ);
+							}
+						}
 					}
 				}
 			}
