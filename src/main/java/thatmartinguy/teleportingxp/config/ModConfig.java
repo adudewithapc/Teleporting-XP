@@ -15,7 +15,7 @@ public class ModConfig
     public static boolean prioritizeNonCreative = true;
 
     @Config.Comment("Should XP orbs teleport even if teleportXP is false?")
-    public static boolean ignoreGamerule = false;
+    public static boolean ignoreGamerule = true;
 
     @Mod.EventBusSubscriber
     private static class EventHandler

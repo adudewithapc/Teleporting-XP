@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import thatmartinguy.teleportingxp.event.CommonEventHandler;
 import thatmartinguy.teleportingxp.util.Reference;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, acceptedMinecraftVersions = Reference.COMPATIBLE_VERSIONS)
 public class TeleportingXP
 {
 	

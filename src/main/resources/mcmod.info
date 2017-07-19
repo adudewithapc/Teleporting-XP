@@ -3,7 +3,7 @@
   "modid": "teleportingxp",
   "name": "Teleporting XP",
   "description": "Adds a gamerule that teleports XP to the closest player, instead of cluttering the ground and causing lag.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "mcversion": "1.11.2",
   "url": "",
   "updateUrl": "",
